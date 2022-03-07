@@ -2,7 +2,7 @@ import React from 'react'
 
 const Book = ({book, handleAddToTBR, handleAddToShelf}) => {
     return (
-        <div className="book-container" key={book.id}>
+        <div className="book-container">
             <img src={book.imageUrl} alt="Book Cover"  />
             <li>{book.title}</li>
             <li>{book.author}</li>
