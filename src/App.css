@@ -1,38 +1,106 @@
+@import url('./styles/reset.css');
+@import url('./styles/variables.css');
+@import url('./styles/booklist.css');
+
 .App {
-  text-align: center;
+    min-height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App.light {
+    background-color: var(--light-bg-color);
+    color: var(--light-primary-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App.dark {
+    background-color: var(--dark-bg-color);
+    color: var(--dark-primary-color);
 }
 
-.App-link {
-  color: #61dafb;
+.App.light a {
+    color: var(--light-primary-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App.dark a {
+    color: var(--dark-primary-color);
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    text-align: center;
+    padding: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.form input[type="search"] {
+    flex-basis: 90%;
+    flex-grow: 1;
+    outline: none;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid transparent;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    -ms-border-radius:4px;
+    -o-border-radius:4px;
+}
+
+.form input[type="search"]:focus {
+    border-color: var(--secondary-color);
+}
+
+.form input[type="submit"] {
+    outline: none;
+    padding: 0.5rem 0.75rem;
+    border: 2px solid transparent;
+    background-color: var(--card-bg-color);
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    -ms-border-radius:4px;
+    -o-border-radius:4px;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+    -webkit-transition: transform 0.1s ease-in-out;
+    -moz-transition: transform 0.1s ease-in-out;
+    -ms-transition: transform 0.1s ease-in-out;
+    -o-transition: transform 0.1s ease-in-out;
+}
+
+.form input[type="submit"]:hover {
+    box-shadow: 0 0 0.25em rgba(0,0,0,0.25);
+}
+
+.form input[type="submit"]:active {
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+}
+
+/* Footer styles */
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    background-color: var(--secondary-color);
+    color: var(--card-bg-color);
+    padding:1rem;
+}
+
+.author {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 0.5em;
 }
