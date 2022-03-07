@@ -1,10 +1,11 @@
 import {useBooks} from '../custom-hooks/useBooks';
-import {Book} from './Book';
-import {SearchForm} from './SearchForm';
+import {Book} from '../components/Book';
+import {SearchForm} from '../components/SearchForm';
 
 
 const BookList = () => {
 
+   
     const {books, loading, error, searchText, dispatch} = useBooks();
 
     const searchBook = (e) => {
@@ -32,12 +33,18 @@ const BookList = () => {
         <SearchForm dispatch={dispatch} searchText={searchText} searchBook={searchBook} />
         {loading && <h3>{loading}</h3>}
         {error!=="" && <h3>{error}</h3>}
-        <ul className="booklist-container">
         {
-            !filteredBooks.length ? <div>No Books Found!</div> :  
-            filteredBooks.map(book => <Book book={book} handleAddToShelf={handleAddToShelf} handleAddToTBR={handleAddToTBR} />)
+            !loading && !error && 
+            <ul className="booklist-container">
+            {
+                !filteredBooks.length ? 
+                    <div>
+                        No Books Found!
+                    </div> :  
+                filteredBooks.map(book => <Book key={book.id} book={book} handleAddToShelf={handleAddToShelf} handleAddToTBR={handleAddToTBR} />)
+            }
+            </ul>
         }
-        </ul>
     </div>
   )
 }
