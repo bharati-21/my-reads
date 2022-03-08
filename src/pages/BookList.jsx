@@ -3,18 +3,12 @@ import {Book} from '../components/Book';
 import {SearchForm} from '../components/SearchForm';
 
 
-const BookList = () => {
-
-   
+const BookList = () => {  
     const {books, loading, error, searchText, dispatch} = useBooks();
-
-    const searchBook = (e) => {
-        e.preventDefault();
-    }
 
     const getFilteredBooks = () => {
         if(searchText !== "") 
-            return books.filter(book => book.title.includes(searchText));
+            return books.filter(book => book.title.toLowerCase().startsWith(searchText.toLowerCase()));
         return books;
     }
 
@@ -30,7 +24,7 @@ const BookList = () => {
 
     return (
     <div>
-        <SearchForm dispatch={dispatch} searchText={searchText} searchBook={searchBook} />
+        <SearchForm dispatch={dispatch} searchText={searchText} />
         {loading && <h3>{loading}</h3>}
         {error!=="" && <h3>{error}</h3>}
         {
