@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import './App.css';
 import { BookList } from './pages/BookList'
-import { MyShelf } from './pages/MyShelf';
+import { MyAccount } from './pages/MyAccount';
 import { MyTbr } from './pages/MyTbr';
 import { NotFound } from './pages/NotFound';
 
@@ -27,7 +27,7 @@ const App = () => {
                             path="/" element={<BookList  />}
                         />
                         <Route 
-                            path="/shelf" element={<MyShelf  />}
+                            path="/account" element={<MyAccount  />}
                         />
                         <Route 
                             path="/tbr" element={<MyTbr  />}
