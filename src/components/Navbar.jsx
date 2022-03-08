@@ -3,7 +3,7 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import '../styles/navbar.css';
 
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { Link,} from 'react-router-dom';
 
 import {useTheme} from '../contexts/theme-context';
 
@@ -16,13 +16,13 @@ const Navbar = () => {
             </h3>
             <ul className="navlinks">
                 <li className="nav-link">
-                    <Link to="/shelf">
-                        My Shelf
+                <Link to="/tbr">
+                        My TBR
                     </Link>
                 </li>
                 <li className="nav-link">
-                <Link to="/tbr">
-                        My TBR
+                    <Link to="/account">
+                        My Account
                     </Link>
                 </li>
             </ul>
