@@ -3,7 +3,7 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import '../styles/navbar.css';
 
-import { Link,} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import {useTheme} from '../contexts/theme-context';
 
