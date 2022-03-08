@@ -7,6 +7,7 @@ const useBooks = () => {
             case 'SET_BOOKS':
                 return {...prevState, books: action.payload};
             case 'SET_LOADING':
+                
                 return {...prevState, loading: action.payload};
             case 'SET_ERROR':
                 return {...prevState, error: action.payload};
@@ -29,7 +30,9 @@ const useBooks = () => {
             try {
                 dispatch({type: 'SET_ERROR', payload: null}); 
                 dispatch({type: 'SET_LOADING', payload: "Loading Books..."}); 
-                const res = await axios.get("http://localhost:5000/books");
+                
+                const res = await axios.get("http://localhost:5000/books"); 
+
                 if(res.status >=200 && res.status<300) {
                     const {data} = res;
                     dispatch({type: 'SET_BOOKS', payload: data}); 
