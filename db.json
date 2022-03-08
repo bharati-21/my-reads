@@ -1,185 +1,185 @@
-
 {
-    "books" : [
-        {   
-            "id" : 1, 
-            "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/40121378._SY475_900x.jpg?v=1632471407" , 
-            "author": "James Clear", 
-            "title":"Atomic Habits"
-        },
-        {   
-            "id" : 2, 
-            "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/4730e179_9947_48f2_9_MdNWD_900x.jpg?v=1632254835" , 
-            "author": "Morgan Housel", 
-            "title":"Psychology of Money"
-        },
-        {   
-            "id" : 3, 
-            "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/71k7V0QvcdL_900x.jpg?v=1644340481" , 
-            "author": "Ichiro Kishimi and Fumitake Koga", 
-            "title":"The Courage To Be Disliked"            
-        },
-        {
-            "id": 4, 
-            "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/91VokXkn8hL_900x.jpg?v=1631443251" , 
-            "author": "Robert T. Kiyosaki", 
-            "title":"Rich Dad Poor Dad"
-        },
-        {
-            "id" : 5, 
-            "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/9781408855713_900x.jpg?v=1645697760" , 
-            "author": "J.K. Rowling",
-            "title":"Harry Potter and the Deathly Hallows"
-        },
-        {   
-            "id" : 6, 
-            "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/71TWkXP0wPL_900x.jpg?v=1645856017" , 
-            "author": "Ichiro Kishimi and Fumitake Koga", 
-            "title":"The Courage to Be Happy"
-        },
-        {   
-            "id" : 7, 
-            "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/40121378._SY475_900x.jpg?v=1632471407" , 
-            "author": "Stephen R. Covey", 
-            "title":"The 7 Habits of Highly Effective People"
-        },
-        {
-            "id" : 8, 
-            "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/81YOuOGFCJL_900x.jpg?v=1645700628" , 
-            "author": "J.K. Rowling",
-            "title":"Harry Potter and the Philospoher's Stone"
-        },
-        {
-            "id" : 9, 
-            "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/91uix57X_jL_900x.jpg?v=1645698877" , 
-            "author": "J.K. Rowling",
-            "title":"Harry Potter and the Prisoner of Azkaban"
-        },
-        {
-            "id" : 10, 
-            "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/Thinkandgrowrich_900x.jpg?v=1636128896" , 
-            "author": "Napoleon Hill",
-            "title":"Think and Grow Rich"
-        },
-        {
-            "id" : 11, 
-            "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1463107108l/28260587.jpg" , 
-            "author": "Sarah J. Maas",
-            "title":"Empire of Storms"
-        },
-        {   
-            "id" : 12, 
-            "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/71bA6Cb2BDL_900x.jpg?v=1642350394" , 
-            "author": "Napoleon Hill", 
-            "title":"Success Habits"
-        },
-        {
-            "id": 13,
-            "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1586722918l/7260188._SY475_.jpg",
-            "author": "Suzanne Collins",
-            "title":"The Hunger Games - Mockingjay"
-        },
-        {   
-            "id" : 14, 
-            "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/51xrWf2_VCL._SX342_SY445_QL70_ML2_900x.jpg?v=1632254364" , 
-            "author": "Leigh Bardugo", 
-            "title":"Seige and Storm"
-        },
-        {
-            "id" : 15, 
-            "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/9781408855683_900x.jpg?v=1645698348" , 
-            "author": "J.K. Rowling",
-            "title":"Harry Potter and the Goblet of Fire"
-        },
-        {
-            "id" : 16, 
-            "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/9781408855690_900x.jpg?v=1645696590" , 
-            "author": "J.K. Rowling",
-            "title":"Harry Potter and the Order of the Phoenix"
-        },
-        {   
-            "id" : 17, 
-            "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/61cbqjFIsZL._SY291_BO1_204_203_200_QL40_FM_900x.jpg?v=1641648180" , 
-            "author": "Osho", 
-            "title":"Courage"
-        },
-        {
-            "id" : 18, 
-            "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1427885895l/6307964.jpg" , 
-            "author": "George R.R. Martin",
-            "title":"A Storm of Swords"
-        },
-        {
-            "id": 19,
-            "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/9781408896945_900x.jpg?v=1645857411",
-            "author": "J.K. Rowling",
-            "title":"Harry Potter - Fantastic Beasts and Where to Find Them"
-        },
-        {
-            "id": 20,
-            "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1586722975l/2767052.jpg",
-            "author": "Suzanne Collins",
-            "title":"The Hunger Games"
-        },
-        {
-            "id" : 21, 
-            "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/9781408855669_900x.jpg?v=1645700221" , 
-            "author": "J.K. Rowling",
-            "title":"Harry Potter and the Chamber of Secrets"
-        },
-        {
-            "id": 22,
-            "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1586722941l/6148028.jpg",
-            "author": "Suzanne Collins",
-            "title":"The Hunger Games - Cathching Fire"
-        },
-        {
-            "id" : 23, 
-            "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/9781408855706_900x.jpg?v=1645701039" , 
-            "author": "J.K. Rowling",
-            "title":"Harry Potter and the Half Blood Prince"
-        },
-        {
-            "id": 24,
-            "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/25883848._SY475_900x.jpg?v=1640362522",
-            "author": "Sally Thorne",
-            "title":"The Hating Game"
-        },
-        {
-            "id": 25,
-            "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/25883848._SY475_900x.jpg?v=1640362522",
-            "author": "Sally Thorne",
-            "title":"The Hating Game"
-        },
-        {
-            "id": 26,
-            "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/51MjPyuVqRL_900x.jpg?v=1632255991",
-            "author": "J.K. Rowling",
-            "title":"Harry Potter and the Philospher's Stone (Old Edition)"
-        },
-        {
-            "id": 27,
-            "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1617768316l/68428._SY475_.jpg",
-            "author": "Brandon Sanderson",
-            "title":"The Final Empire"
-        },
-        {
-            "id": 28,
-            "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1351778881l/5060378.jpg",
-            "author": "Stieg Larsson",
-            "title":"The Girl Who Played with Fire"
-        },
-        {
-            "id": 29,
-            "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1562726234l/13496.jpg",
-            "author": "George R.R. Martin",
-            "title":"A Game of Thrones"
-        },
-        {
-            "id": 30,
-            "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1600432716l/51942513._SY475_.jpg",
-            "author": "Jay Shetty",
-            "title":"Think Like a Monk"
-        }
-    ]
+  "books": [
+    {
+      "id": 1,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/40121378._SY475_900x.jpg?v=1632471407",
+      "author": "James Clear",
+      "title": "Atomic Habits"
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/4730e179_9947_48f2_9_MdNWD_900x.jpg?v=1632254835",
+      "author": "Morgan Housel",
+      "title": "Psychology of Money"
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/71k7V0QvcdL_900x.jpg?v=1644340481",
+      "author": "Ichiro Kishimi and Fumitake Koga",
+      "title": "The Courage To Be Disliked"
+    },
+    {
+      "id": 4,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/91VokXkn8hL_900x.jpg?v=1631443251",
+      "author": "Robert T. Kiyosaki",
+      "title": "Rich Dad Poor Dad"
+    },
+    {
+      "id": 5,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/9781408855713_900x.jpg?v=1645697760",
+      "author": "J.K. Rowling",
+      "title": "Harry Potter and the Deathly Hallows"
+    },
+    {
+      "id": 6,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/71TWkXP0wPL_900x.jpg?v=1645856017",
+      "author": "Ichiro Kishimi and Fumitake Koga",
+      "title": "The Courage to Be Happy"
+    },
+    {
+      "id": 7,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/40121378._SY475_900x.jpg?v=1632471407",
+      "author": "Stephen R. Covey",
+      "title": "The 7 Habits of Highly Effective People"
+    },
+    {
+      "id": 8,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/81YOuOGFCJL_900x.jpg?v=1645700628",
+      "author": "J.K. Rowling",
+      "title": "Harry Potter and the Philospoher's Stone"
+    },
+    {
+      "id": 9,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/91uix57X_jL_900x.jpg?v=1645698877",
+      "author": "J.K. Rowling",
+      "title": "Harry Potter and the Prisoner of Azkaban"
+    },
+    {
+      "id": 10,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/Thinkandgrowrich_900x.jpg?v=1636128896",
+      "author": "Napoleon Hill",
+      "title": "Think and Grow Rich"
+    },
+    {
+      "id": 11,
+      "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1463107108l/28260587.jpg",
+      "author": "Sarah J. Maas",
+      "title": "Empire of Storms"
+    },
+    {
+      "id": 12,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/71bA6Cb2BDL_900x.jpg?v=1642350394",
+      "author": "Napoleon Hill",
+      "title": "Success Habits"
+    },
+    {
+      "id": 13,
+      "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1586722918l/7260188._SY475_.jpg",
+      "author": "Suzanne Collins",
+      "title": "The Hunger Games - Mockingjay"
+    },
+    {
+      "id": 14,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/51xrWf2_VCL._SX342_SY445_QL70_ML2_900x.jpg?v=1632254364",
+      "author": "Leigh Bardugo",
+      "title": "Seige and Storm"
+    },
+    {
+      "id": 15,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/9781408855683_900x.jpg?v=1645698348",
+      "author": "J.K. Rowling",
+      "title": "Harry Potter and the Goblet of Fire"
+    },
+    {
+      "id": 16,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/9781408855690_900x.jpg?v=1645696590",
+      "author": "J.K. Rowling",
+      "title": "Harry Potter and the Order of the Phoenix"
+    },
+    {
+      "id": 17,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/61cbqjFIsZL._SY291_BO1_204_203_200_QL40_FM_900x.jpg?v=1641648180",
+      "author": "Osho",
+      "title": "Courage"
+    },
+    {
+      "id": 18,
+      "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1427885895l/6307964.jpg",
+      "author": "George R.R. Martin",
+      "title": "A Storm of Swords"
+    },
+    {
+      "id": 19,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/9781408896945_900x.jpg?v=1645857411",
+      "author": "J.K. Rowling",
+      "title": "Harry Potter - Fantastic Beasts and Where to Find Them"
+    },
+    {
+      "id": 20,
+      "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1586722975l/2767052.jpg",
+      "author": "Suzanne Collins",
+      "title": "The Hunger Games"
+    },
+    {
+      "id": 21,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/9781408855669_900x.jpg?v=1645700221",
+      "author": "J.K. Rowling",
+      "title": "Harry Potter and the Chamber of Secrets"
+    },
+    {
+      "id": 22,
+      "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1586722941l/6148028.jpg",
+      "author": "Suzanne Collins",
+      "title": "The Hunger Games - Cathching Fire"
+    },
+    {
+      "id": 23,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/9781408855706_900x.jpg?v=1645701039",
+      "author": "J.K. Rowling",
+      "title": "Harry Potter and the Half Blood Prince"
+    },
+    {
+      "id": 24,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/25883848._SY475_900x.jpg?v=1640362522",
+      "author": "Sally Thorne",
+      "title": "The Hating Game"
+    },
+    {
+      "id": 25,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/25883848._SY475_900x.jpg?v=1640362522",
+      "author": "Sally Thorne",
+      "title": "The Hating Game"
+    },
+    {
+      "id": 26,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0592/0935/1321/products/51MjPyuVqRL_900x.jpg?v=1632255991",
+      "author": "J.K. Rowling",
+      "title": "Harry Potter and the Philospher's Stone (Old Edition)"
+    },
+    {
+      "id": 27,
+      "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1617768316l/68428._SY475_.jpg",
+      "author": "Brandon Sanderson",
+      "title": "The Final Empire"
+    },
+    {
+      "id": 28,
+      "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1351778881l/5060378.jpg",
+      "author": "Stieg Larsson",
+      "title": "The Girl Who Played with Fire"
+    },
+    {
+      "id": 29,
+      "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1562726234l/13496.jpg",
+      "author": "George R.R. Martin",
+      "title": "A Game of Thrones"
+    },
+    {
+      "id": 30,
+      "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1600432716l/51942513._SY475_.jpg",
+      "author": "Jay Shetty",
+      "title": "Think Like a Monk"
+    }
+  ],
+  "tbr": []
 }
