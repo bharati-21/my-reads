@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {useAuth} from '../contexts/auth-context';
+import { Link } from 'react-router-dom';
 
 import { auth } from '../firebase/config';
 import { signInWithEmailAndPassword } from 'firebase/auth'
@@ -22,12 +23,20 @@ const Login = () => {
         setError(null);
         try {
             const response = await signInWithEmailAndPassword(auth, formData.email, formData.password);
-            authDispatch({type: 'LOGIN', payload: response.user});
+            if(response.status >=200 && response.status < 300 ) {
+                authDispatch({type: 'LOGIN', payload: response.user});
+            }
+            else {
+                throw new Error('Inavlid email or password');
+            }
         }
         catch(error) {
             if(error.message.includes('user-not-found')) {
                 setError('User not found. Invalid Email or Password.');
             } 
+            else {
+                setError('Invalid Email or Password');
+            }
         }
     }
 
@@ -84,8 +93,11 @@ const Login = () => {
                 </div>
                 
                 <input type="submit" value="Login" className="btn btn-accent"/>
+                <p className='auth-error'>{error}</p>
             </form>
-            <p className='auth-error'>{error}</p>
+            <div className="auth-redirect">
+                New user? <Link to="/signup" className="link">Signup here</Link>
+            </div>
         </div>
     )
 }
