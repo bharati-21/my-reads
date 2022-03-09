@@ -1,7 +1,6 @@
 import {useContext, createContext, useReducer, useEffect} from 'react';
 import axios from 'axios';
 
-
 const TbrContext = createContext([]);
 
 const {Provider} = TbrContext;
