@@ -3,6 +3,8 @@
 @import url('./styles/booklist.css');
 @import url('./styles/toast.css');
 @import url('./styles/tbr.css');
+@import url('./styles/auth.css');
+@import url('./styles/account.css');
 
 .App {
     min-height: 100vh;
@@ -12,6 +14,7 @@
     max-width: 960px;
     margin: 0 auto;
     padding: 1rem;
+    min-height: 90vh;
 }
 
 .App.light {
