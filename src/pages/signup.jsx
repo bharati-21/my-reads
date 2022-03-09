@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {useAuth} from '../contexts/auth-context';
+import { Link } from 'react-router-dom';
 
 import { auth } from '../firebase/config';
 import {createUserWithEmailAndPassword} from 'firebase/auth';
@@ -29,7 +30,9 @@ const Signup = () => {
             authDispatch({type: 'LOGIN', payload: response.user});
         }
         catch(error) {
-            setError(error.message);
+            if(error.message.includes('email-already-in-use')) {
+                setError('Email already in use');
+            }
         }
     }
 
@@ -99,9 +102,11 @@ const Signup = () => {
                     </p>
                 </div>  
                 <input type="submit" className='btn btn-accent' value="Signup" />
-
+                {error && <p className='auth-error'>{error}</p>}
             </form>
-            {error && <p>{error}</p>}
+            <div className="auth-redirect">
+                Already a user? <Link to="/login" className="link">Login here</Link>
+            </div>
         </div>
     )
 }
