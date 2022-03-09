@@ -1,6 +1,4 @@
 .navbar {
-    /* background-color: var(--secondary-color); */
-    /* color: var(--light-bg-color); */
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -27,4 +25,21 @@
 
 .nav-link a:hover {
     border-color: var(--accent-color);
+}
+
+.account-theme-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 400px) {
+    .navbar {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
 }
