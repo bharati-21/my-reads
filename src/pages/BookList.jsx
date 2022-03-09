@@ -55,7 +55,7 @@ const BookList = () => {
             {showToast && <Toast toastText={toastText} toastTheme={toastTheme} toastDispatch={toastDispatch} />}
             <SearchForm dispatch={dispatch} searchText={searchText} />
             {loading && <h3>{loading}</h3>}
-            {error!=="" && <h3>{error}</h3>}
+            {error!=="" && <h3 className="error">{error}</h3>}
             {
                 !loading && !error && 
                 <ul className="booklist-container">
@@ -74,8 +74,6 @@ const BookList = () => {
                                 :
                                 <button className="btn btn-secondary btn-add-tbr" onClick={e => sendDispatchToTbr(book, 'ADD_TO_TBR', `Added ${book.title} to TBR`)}>Add to TBR</button>
                             }
-                            
-                            <button className="btn btn-accent btn-add-shelf" onClick={e => sendDispatchToTbr(book)}>Add to Shelf</button>
                         </Book>
                     ))
                 }
