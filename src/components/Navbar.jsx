@@ -7,37 +7,50 @@ import { Link } from 'react-router-dom';
 import { useLogout} from '../custom-hooks/useLogout';
 
 import {useTheme} from '../contexts/theme-context';
+import { useAuth } from '../contexts/auth-context';
+
 
 const Navbar = () => {
+    const {authState} = useAuth();
+    const {user} = authState;
+
     const { logout } = useLogout();
     const {theme, toggleTheme} = useTheme();
-  return (
+
+    return (
         <nav className="navbar">
             <h3 className="logo">
-               <Link to="/">myReads</Link>
+                <Link to="/">myReads</Link>
             </h3>
-            <ul className="navlinks">
-                <li className="nav-link">
-                <Link to="/tbr">
-                        My TBR
-                    </Link>
-                </li>
-                <li className="nav-link">
-                    <Link to="/account">
-                        My Account
-                    </Link>
-                </li>
-            </ul>
+            {
+                user && (
+                    <ul className="navlinks">
+                        <li className="nav-link">
+                            <Link to="/tbr">
+                                My TBR
+                            </Link>
+                        </li>
+                        <li className="nav-link">
+                            <Link to="/account">
+                                My Account
+                            </Link>
+                        </li>
+                    </ul>
+                )
+            }
             <div className="account-theme-wrapper">
                 <div className="theme-wrapper" onClick={toggleTheme}>
                     {theme === 'dark' ? <LightModeIcon  /> : <DarkModeIcon /> }
                 </div>
-                <button className="btn btn-accent btn-logout">
-                    <Link to="/" onClick={logout}>Logout</Link>
-                </button>
+                {
+                    user &&
+                    <button className="btn btn-accent btn-logout">
+                        <Link to="/" onClick={logout}>Logout</Link>
+                    </button>
+                }
             </div>
         </nav>
-  )
+    )
 }
 
 export {Navbar};
