@@ -35,6 +35,10 @@
     justify-content: center;
 }
 
+.btn-logout.btn-accent a {
+    color: var(--bg-card-color);
+}
+
 @media screen and (max-width: 400px) {
     .navbar {
         flex-wrap: wrap;
