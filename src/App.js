@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 
 import './App.css';
 import { BookList } from './pages/BookList'
@@ -11,39 +11,72 @@ import { Signup } from './pages/Signup';
 import { Navbar } from './components/Navbar';
 import { useTheme } from './contexts/theme-context';
 import { Footer } from './components/Footer';
+import { useAuth } from './contexts/auth-context';
 
 
 const App = () => {
+    const {authState} = useAuth();
+    const {user, authIsReady} = authState;
     const {theme} = useTheme();
+
     return (
         <div className={`App ${theme}`}>
-            <div className="app-container">
-                <BrowserRouter> 
-                    <Navbar />
-                    <Routes>
-                        <Route 
-                            path='*' 
-                            element={<NotFound />} 
-                        />
-                        <Route 
-                            path="/" element={<BookList  />}
-                        />
-                        <Route 
-                            path="/account" element={<MyAccount  />}
-                        />
-                        <Route 
-                            path="/tbr" element={<MyTbr  />}
-                        />
-                        <Route 
-                            path="/login" element={<Login  />}
-                        />
-                        <Route 
-                            path="/signup" element={<Signup  />}
-                        />
-                    </Routes>
-                </BrowserRouter>
-            </div>          
-            <Footer />
+            {
+                authIsReady && (
+                    <>
+                        <div className="app-container">
+                            <BrowserRouter> 
+                                <Navbar />
+                                <Routes>
+                                    <Route 
+                                        path='*' 
+                                        element={
+                                            <NotFound />
+                                        } 
+                                    />
+                                    <Route 
+                                        path="/" element= {
+                                            user ? <BookList />
+                                            : 
+                                            <Navigate to="/login"/>
+                                        }
+                                    />
+                                    <Route 
+                                        path="/account" element= { 
+                                            user ? <MyAccount /> 
+                                            : 
+                                            <Navigate to="/login"/>
+                                        }
+                                    />
+                                    <Route 
+                                        path="/tbr" element= {
+                                            user ? <MyTbr /> 
+                                            : 
+                                            <Navigate to="/login"/>
+                                        }
+                                    />
+                                    <Route 
+                                        path="/login" element={!user ?  
+                                            <Login  /> 
+                                            : 
+                                            <Navigate to="/" />
+                                        }
+                                    />
+                                    <Route 
+                                        path="/signup" element={
+                                            !user ? 
+                                            <Signup  /> 
+                                            : 
+                                            <Navigate to="/" />
+                                        }
+                                    />
+                                </Routes>
+                            </BrowserRouter>
+                        </div>          
+                        <Footer />
+                    </>
+                )
+            }
         </div>
     );
 }
