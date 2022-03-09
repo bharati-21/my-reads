@@ -5,6 +5,8 @@ import { BookList } from './pages/BookList'
 import { MyAccount } from './pages/MyAccount';
 import { MyTbr } from './pages/MyTbr';
 import { NotFound } from './pages/NotFound';
+import { Login } from './pages/Login';
+import { Signup } from './pages/Signup';
 
 import { Navbar } from './components/Navbar';
 import { useTheme } from './contexts/theme-context';
@@ -31,6 +33,12 @@ const App = () => {
                         />
                         <Route 
                             path="/tbr" element={<MyTbr  />}
+                        />
+                        <Route 
+                            path="/login" element={<Login  />}
+                        />
+                        <Route 
+                            path="/signup" element={<Signup  />}
                         />
                     </Routes>
                 </BrowserRouter>
