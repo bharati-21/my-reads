@@ -24,10 +24,12 @@ const reducerFunction = (prevUser, action) => {
 }
 
 const AuthProvider = ({children}) => {
-    const [authState, authDispatch] = useReducer(reducerFunction, {
-        user: null,
-        authIsReady: false
-    });
+    const [authState, authDispatch] = useReducer(
+        reducerFunction, {
+            user: null,
+            authIsReady: false
+        }
+    );
 
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, user => {
@@ -36,7 +38,6 @@ const AuthProvider = ({children}) => {
         })
     }, [])
 
-    console.log(authState);
 
     return (
         <Provider value={{authState, authDispatch}}>
