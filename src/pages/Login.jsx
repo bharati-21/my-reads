@@ -6,34 +6,86 @@ import { signInWithEmailAndPassword } from 'firebase/auth'
 
 
 const Login = () => {
-    const {authState, authDispatch} = useAuth();
-    const [formData, setFormData] = useState({});
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const { authDispatch } = useAuth();
+    const [formData, setFormData] = useState({
+        email: '',
+        password: ''
+    });
     const [error, setError] = useState(null);
+    const [message, setMessage] = useState({
+        password: {theme: '', message: ''},
+        email: {theme: '', message: ''}
+    });
 
     const handleFormSubmit = async event => {
         event.preventDefault();
         setError(null);
         try {
-            const response = await signInWithEmailAndPassword(auth, email, password);
-            console.log(response);
+            const response = await signInWithEmailAndPassword(auth, formData.email, formData.password);
             authDispatch({type: 'LOGIN', payload: response.user});
         }
         catch(error) {
-            setError(error.message);
+            if(error.message.includes('user-not-found')) {
+                setError('User not found. Invalid Email or Password.');
+            } 
         }
     }
 
+    const handleInputChange = event => {
+        const {name, value} = event.target;
+        setFormData(prevFormData => ({...prevFormData, [name]: value}));
+        if(value === "") {
+            setMessage(prevMessage => ({...prevMessage, [name]: {theme: 'error', message:`${name} cannot be empty`}}));
+        }
+        else {
+            setMessage(prevMessage => ({...prevMessage, [name]: {theme: '', message:``}}));
+            if(name === 'password') {
+                if(value.length < 6) {
+                    setMessage(prevMessage => ({...prevMessage, [name]: {theme: 'error', message: 'Password should be at lease 6 characters long'}}));
+                }
+                else {
+                    const regex = /([0-9]+[A-Za-z]+)|([A-Za-z]+[0-9]+)/;  
+                    if(!regex.test(value)) {
+                        setMessage(prevMessage => ({...prevMessage, [name]: {theme: 'error', message: 'Password should have at least one number and one letter'}}));
+                    }
+                    else {
+                        setMessage(prevMessage => ({...prevMessage, [name]: {theme: 'success', message: 'Password accepted'}}));
+                    }
+                }
+            }
+            else if(name === 'email') {
+                const regex = /^[a-z0-9]{3,}@[a-z]+\.[a-z]{2,3}$/;
+                if(!regex.test(value)) {
+                    setMessage(prevMessage => ({...prevMessage, [name]: {theme: 'error', message: 'Incorrect email. Example - workingexample@email.com'}}));
+                }
+                else {
+                    setMessage(prevMessage => ({...prevMessage, [name]: {theme: 'success', message: 'Email accepted'}}))
+                }
+            }
+        }
+        
+    }
+
     return (
-        <div className="login-container">
-            <h2>Login</h2>
-            <form onSubmit={handleFormSubmit}>
-                <input type="email" placeholder="Enter your email..." value={email} onChange={e => setEmail(e.target.value)} required />
-                <input type="password" placeholder="Enter your password..." value={password} onChange={e => setPassword(e.target.value)} required />
-                <input type="submit" value="Login" />
+        <div className="auth-container login-container">
+            <h2 className="section-head">Login</h2>
+            <form onSubmit={handleFormSubmit} className="auth-form">
+                <div className="input-group">
+                    <input type="email" name="email" placeholder="Enter your email..." value={formData.email}  onChange={handleInputChange} required />    
+                    <p className={`input-message message ${message.email.theme}`}>
+                        {message.email.message}
+                    </p>
+                </div>
+                <div className="input-group">
+                    <input type="password" name="password" placeholder="Enter your password..." value={formData.password} onChange={handleInputChange} required />
+                    <p className={`input-message message ${message.password.theme}`}>
+                        {message.password.message}
+                    </p>
+                </div>
+                
+                <input type="submit" value="Login" className="btn btn-accent"/>
             </form>
-            <p>{error}</p>
+            <p className='auth-error'>{error}</p>
         </div>
     )
 }
