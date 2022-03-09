@@ -70,3 +70,13 @@
     color: red;
     margin: 1rem auto 0;
 }
+
+.auth-redirect {
+    margin-top: 2rem;
+}
+
+.auth-redirect a.link.link {
+    background-color: var(--accent-color);
+    color: var(--card-bg-color);
+    padding: 0.25rem;
+}
