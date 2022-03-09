@@ -4,10 +4,12 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import '../styles/navbar.css';
 
 import { Link } from 'react-router-dom';
+import { useLogout} from '../custom-hooks/useLogout';
 
 import {useTheme} from '../contexts/theme-context';
 
 const Navbar = () => {
+    const { logout } = useLogout();
     const {theme, toggleTheme} = useTheme();
   return (
         <nav className="navbar">
@@ -26,8 +28,13 @@ const Navbar = () => {
                     </Link>
                 </li>
             </ul>
-            <div className="theme-wrapper" onClick={toggleTheme}>
-                {theme === 'dark' ? <LightModeIcon  /> : <DarkModeIcon /> }
+            <div className="account-theme-wrapper">
+                <div className="theme-wrapper" onClick={toggleTheme}>
+                    {theme === 'dark' ? <LightModeIcon  /> : <DarkModeIcon /> }
+                </div>
+                <button className="btn btn-accent btn-logout">
+                    <Link to="/" onClick={logout}>Logout</Link>
+                </button>
             </div>
         </nav>
   )
