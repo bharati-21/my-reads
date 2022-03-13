@@ -9,6 +9,7 @@ const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
 
 const reducerFunction = (prevTbr, action) => {
     const {type, payload} = action;
+    
     switch(type) {
         case 'GET_TBR_BOOKS':
             return payload;

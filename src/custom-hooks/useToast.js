@@ -2,7 +2,9 @@ import { useReducer } from 'react';
 
 const useToast = () => {
     const toastReducer = (prevToast, action) => {
+
         const {type} = action;
+        
         switch(type){
             case 'SHOW_TOAST':
                 const {payload} = action;

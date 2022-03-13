@@ -26,6 +26,7 @@ const useBooks = () => {
     });
     
     useEffect(() => {
+
         (async () => {
             try {
                 dispatch({type: 'SET_ERROR', payload: null}); 
@@ -49,6 +50,7 @@ const useBooks = () => {
                 dispatch({type: 'SET_ERROR', payload: 'Something went really wrong! Try again'});
             }
         })()
+        
     }, []);
 
     return {books, loading, error, searchText, dispatch};
