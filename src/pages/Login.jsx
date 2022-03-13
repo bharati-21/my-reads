@@ -23,12 +23,8 @@ const Login = () => {
         setError(null);
         try {
             const response = await signInWithEmailAndPassword(auth, formData.email, formData.password);
-            if(response.status >=200 && response.status < 300 ) {
-                authDispatch({type: 'LOGIN', payload: response.user});
-            }
-            else {
-                throw new Error('Inavlid email or password');
-            }
+            console.log(response);
+            authDispatch({type: 'LOGIN', payload: response.user});
         }
         catch(error) {
             if(error.message.includes('user-not-found')) {
