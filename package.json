@@ -1,5 +1,6 @@
 {
   "name": "my-reads",
+  "homepage": "https://bharati-21.github.io/my-reads",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -26,7 +27,9 @@
     "eject": "react-scripts eject",
     "json:server": "json-server --watch db.json --port 5000",
     "dev": "concurrently \"npm start\" \"npm run json:server\"",
-    "build-dev": "concurrently \"npm run-script build\" \"npm run json:server\""
+    "build-dev": "concurrently \"npm run-script build\" \"npm run json:server\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
