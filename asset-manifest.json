@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/my-reads/static/css/main.347fa7cc.css",
+    "main.js": "/my-reads/static/js/main.840717b1.js",
+    "index.html": "/my-reads/index.html",
+    "main.347fa7cc.css.map": "/my-reads/static/css/main.347fa7cc.css.map",
+    "main.840717b1.js.map": "/my-reads/static/js/main.840717b1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.347fa7cc.css",
+    "static/js/main.840717b1.js"
+  ]
+}
